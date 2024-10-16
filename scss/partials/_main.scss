@@ -1,0 +1,95 @@
+@use 'variables'; // import the variables partial
+@use 'mixins'; // import the mixins partial
+
+main {
+  h1 {
+    font-family: variables.$font-sans-serif;
+    font-size: variables.$font-size*3;
+    color: lighten(variables.$color-black, 20%);
+  }
+
+  h2 {
+    @include mixins.doubleFontSize(20px);
+  }
+
+  .recipes {
+    padding: variables.$section-padding;
+    background-color: #ccc;
+
+    ul {
+      li {
+        color: variables.$color-red;
+
+        &:nth-child(even) {
+          color: blue;
+        }
+      }
+    }
+
+    &.second-class {
+      border: 5px solid variables.$color-black;
+    }
+
+    ~ section {
+      padding: variables.$section-padding;
+      background-color: variables.$color-orange;
+    }
+  }
+
+  .dummy-content {
+    color: variables.$color-blue;
+    font-size: variables.$font-size*1.25;
+    text-decoration: line-through;
+  }
+
+  .custom-content {
+    @extend .dummy-content;
+    background-color: variables.$color-black;
+    text-decoration: underline;
+  }
+
+  .box {
+    width: 100px;
+    height: 50px;
+    @include mixins.borderRadius(10px, 20px, 10px, 20px);
+  }
+
+  .box-1 {
+    @extend .box;
+    background-color: variables.$color-red;
+  }
+
+  .box-2 {
+    @extend .box;
+    background-color: variables.$color-blue;
+  }
+
+  .box-3 {
+    @extend .box;
+    background-color: variables.$color-yellow;
+  }
+
+  @for $i from 1 through 3 {
+    #box-#{$i} {
+      width: 100px * $i;
+    }
+  }
+
+  .bem {
+    &:hover {
+      background-color: red;
+    }
+
+    &__heading {
+      color: purple;
+    }
+
+    &__content {
+      color: green;
+    }
+
+    .dark-mode & {
+      background-color: black;
+    }
+  }
+}

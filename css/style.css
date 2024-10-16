@@ -1,0 +1,132 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #fdf000;
+}
+header .logo {
+  font-size: 30px;
+}
+header menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+header menu li {
+  background-color: white;
+  padding: 5px;
+}
+header menu li a {
+  color: #333333;
+  text-decoration: none;
+}
+header menu li a:hover {
+  color: #ff0000;
+}
+header menu li span {
+  font-style: italic;
+}
+header menu .home-link {
+  background-color: red;
+}
+header menu .about-link {
+  background-color: red;
+}
+header menu .contact-link {
+  background-color: red;
+}
+
+main h1 {
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+  color: #666666;
+}
+main h2 {
+  font-size: 40px;
+}
+main .recipes {
+  padding: 20px 8px;
+  background-color: #ccc;
+}
+main .recipes ul li {
+  color: #ff0000;
+}
+main .recipes ul li:nth-child(even) {
+  color: blue;
+}
+main .recipes.second-class {
+  border: 5px solid #333333;
+}
+main .recipes ~ section {
+  padding: 20px 8px;
+  background-color: #ffa500;
+}
+main .dummy-content, main .custom-content {
+  color: blue;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+main .custom-content {
+  background-color: #333333;
+  text-decoration: underline;
+}
+main .box, main .box-3, main .box-2, main .box-1 {
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+}
+main .box-1 {
+  background-color: #ff0000;
+}
+main .box-2 {
+  background-color: blue;
+}
+main .box-3 {
+  background-color: #fdf000;
+}
+main #box-1 {
+  width: 100px;
+}
+main #box-2 {
+  width: 200px;
+}
+main #box-3 {
+  width: 300px;
+}
+main .bem:hover {
+  background-color: red;
+}
+main .bem__heading {
+  color: purple;
+}
+main .bem__content {
+  color: green;
+}
+.dark-mode main .bem {
+  background-color: black;
+}
+
+footer p {
+  font-weight: bold;
+  font-style: italic;
+  color: #ff0000;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

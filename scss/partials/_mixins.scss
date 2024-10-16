@@ -1,0 +1,14 @@
+@mixin doubleFontSize($size: 16px) {
+  @if $size <= 30 {
+    font-size: $size*2;
+  } @else {
+    font-size: $size;
+  }
+}
+
+@mixin borderRadius($tl, $tr, $br, $bl) {
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}

@@ -1,0 +1,10 @@
+@use 'variables';
+
+footer {
+  p {
+    font-weight: bold;
+    font-style: italic;
+    color: variables.$color-red;
+    text-align: center;
+  }
+}

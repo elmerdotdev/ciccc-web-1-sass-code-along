@@ -1,0 +1,14 @@
+@use 'partials/variables';
+@use 'partials/header';
+@use 'partials/main';
+@use 'partials/footer';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: variables.$font-serif;
+  font-size: variables.$font-size;
+}
