@@ -13,7 +13,7 @@
   border-bottom-left-radius: $bl;
 }
 
-@mixin pxToRem($px) {
-  $rem: $px / 16;
+@mixin pxToRem($px, $base: 16) {
+  $rem: $px / $base;
   font-size: #{$rem}rem;
 }
